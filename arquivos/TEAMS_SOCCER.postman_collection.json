@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "c6928a91-eb82-43ad-adbf-c6a82fc829b5",
+		"name": "TEAMS_SOCCER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/team/Atlético",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"team",
+						"Atlético"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Time",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Coritiba\",\r\n    \"cidade\": \"Curitiba\",\r\n    \"serie\": \"A\",\r\n    \"titulos\": [\r\n        {\"nome\": \"Estadual\",  \"total\": 0},\r\n        {\"nome\": \"Nacional\",  \"total\": 0},\r\n        {\"nome\": \"Internacional\",  \"total\": 0}\r\n    ],\r\n    \"folhaPagamento\": 100000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/newTeam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"newTeam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/team/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"team",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Time por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Atlético Paranaense\",\r\n    \"cidade\": \"Curitiba/PR\",\r\n    \"serie\": \"A\",\r\n    \"titulos\": [\r\n        {\"nome\": \"Estadual\",  \"total\": 13},\r\n        {\"nome\": \"Nacional\",  \"total\": 5},\r\n        {\"nome\": \"Internacional\",  \"total\": 2}\r\n    ],\r\n    \"folhaPagamento\": 600000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/team/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"team",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
